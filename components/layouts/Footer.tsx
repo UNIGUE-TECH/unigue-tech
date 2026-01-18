@@ -1,72 +1,84 @@
-function Footer() {
+const links = [
+  'Home',
+  'What We Do',
+  'Industry',
+  'Our Work',
+  'About',
+]
+
+export default  function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white dark:border-gray-800 dark:bg-black">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-start justify-between pb-8 gap-8 sm:gap-0 border-b border-gray-200 dark:border-gray-800">
-          {/* Contact Information */}
-          <div className="flex flex-col gap-4">
-            <h2 className="text-xl font-bold text-foreground">Unigue Tech</h2>
-            <div className="text-gray-600 dark:text-gray-400 text-sm">
-              <p>info@uniguetech.com</p>
-              <p>+1 (555) 123-4567</p>
-            </div>
-          </div>
+    <footer className="relative bg-footer text-white p-10">
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="relative max-w-7xl mx-auto px-8 bg-black ">
+        <div className="flex flex-col items-center md:flex-row justify-between gap-16 ">
+          <aside className="px-5">
+            <div className="max-w-md">
+      <h3 className="text-3xl font-semibold leading-tight">
+        UNIQUE <br /> TECHNOLOGY
+      </h3>
 
-          <div className="flex flex-col md:flex-row md:items-center gap-20">
-            <div>
-              <ul className="list-none text-gray-600 dark:text-gray-400 text-sm space-y-2">
-                <li>FAQs</li>
-                <li>Careers</li>
-                <li>Blog</li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-4">
-              <h2 className="text-foreground text-sm font-medium mb-2">
-                Social
-              </h2>
-              <ul className="list-none text-gray-600 dark:text-gray-400 text-sm space-y-2">
-                <li>Instagram</li>
-                <li>LinkedIn</li>
-                <li>Twitter</li>
-              </ul>
-            </div>
-          </div>
+      <p className="text-gray-400 mt-4">
+        Building Tomorrow, Today
+      </p>
 
-          {/* Newsletter */}
-          <div className="flex flex-col gap-4">
-            <h2 className="text-foreground text-sm font-medium mb-2">
-              Get updates from us
-            </h2>
-            <div className="relative flex items-center">
-              <input
-                type="text"
-                className="w-full max-w-[312px] h-12 py-2 pl-4 pr-20 bg-gray-100 dark:bg-gray-800 border-0 rounded-lg"
-                placeholder="Your email.."
-              />
-              <button className="absolute right-2 top-1 py-2 px-4 bg-foreground rounded-lg text-background text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
+      <div className="mt-8">
+        <ul className="flex flex-wrap gap-6 text-sm">
+      {links.map((link) => (
+        <li key={link}>
+          <a
+            href="#"
+            className="hover:text-gray-300 transition underline"
+          >
+            {link}
+          </a>
+        </li>
+      ))}
+    </ul>
+      </div>
+    </div>
+          </aside>
+          <aside className="py-5">
+            <div className="bg-[#2a2a2a] rounded-xl p-8 w-full max-w-sm">
+      <h4 className="text-lg font-medium mb-6 text-center">
+        Reach out to us
+      </h4>
+
+      <form className="space-y-4">
+        <input
+          type="text"
+          placeholder="Name"
+          className="w-full bg-[#3a3a3a] text-sm px-4 py-3 rounded-md outline-none"
+        />
+
+        <input
+          type="email"
+          placeholder="Email address"
+          className="w-full bg-[#3a3a3a] text-sm px-4 py-3 rounded-md outline-none"
+        />
+
+        <textarea
+          placeholder="Subject description"
+          rows={4}
+          className="w-full bg-[#3a3a3a] text-sm px-4 py-3 rounded-md outline-none resize-none"
+        />
+
+        <button
+          type="submit"
+          className="w-full bg-white text-black py-3 rounded-md font-medium hover:bg-gray-200 transition"
+        >
+          Contact us
+        </button>
+      </form>
+    </div>
+          </aside>
         </div>
-
-        {/* Footer Bottom */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 mt-8">
-          <span className="text-gray-600 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} Unigue Tech. All rights reserved.
-          </span>
-          <div className="flex gap-8">
-            <span className="text-gray-600 dark:text-gray-400 text-sm">
-              Terms & Conditions
-            </span>
-            <span className="text-gray-600 dark:text-gray-400 text-sm">
-              Privacy Policy
-            </span>
-          </div>
-        </div>
+         <div className=" py-6 border-t border-white/10 text-center text-sm text-gray-400">
+      © 2025 Unique. All rights reserved.
+    </div>
       </div>
     </footer>
   );
 }
 
-export default Footer;
+

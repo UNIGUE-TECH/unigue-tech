@@ -7,7 +7,7 @@ interface LandingPageProps {
 
 function LandingPage({ children }: LandingPageProps) {
   return (
-    <div className="min-h-screen bg-white dark:bg-black overflow-x-hidden">
+    <div className="min-h-screen bg-white dark:bg-background overflow-x-hidden">
       <Navbar />
       {children}
       <Footer />
