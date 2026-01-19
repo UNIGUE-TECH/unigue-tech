@@ -3,7 +3,7 @@ import Hero from "../components/landing-page/home/Hero";
 import About from "../components/landing-page/about/About";
 import Services from "../components/landing-page/home/Services";
 import Features from "../components/landing-page/features/Features";
-import Contact from "../components/landing-page/contact-us/Contact";
+import Industries from "../components/landing-page/home/Industries";
 
 export default function Home() {
   return (
@@ -11,9 +11,9 @@ export default function Home() {
       <div className="flex flex-col gap-20 md:gap-10">
         <Hero />
         <About />
+        <Industries />
         <Services />
         <Features />
-        <Contact />
       </div>
     </LandingPage>
   );

@@ -28,61 +28,60 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.pill-animate {
-  position: absolute;
-  animation-duration: 12s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  transform: rotate(var(--rotation));
-  will-change: transform;
-}
-
-/* Different motion patterns */
 @keyframes float1 {
-  0% {
-    transform: translate(0, 0) rotate(var(--rotation));
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(var(--rotation));
+  }
+  25% {
+    transform: translateY(-15px) translateX(10px) rotate(calc(var(--rotation) + 5deg));
   }
   50% {
-    transform: translate(30px, -12px) rotate(calc(var(--rotation) + 4deg));
+    transform: translateY(-10px) translateX(-5px) rotate(calc(var(--rotation) - 5deg));
   }
-  100% {
-    transform: translate(0, 0) rotate(var(--rotation));
+  75% {
+    transform: translateY(-20px) translateX(8px) rotate(calc(var(--rotation) + 3deg));
   }
 }
 
 @keyframes float2 {
-  0% {
-    transform: translate(0, 0) rotate(var(--rotation));
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(var(--rotation));
   }
-  50% {
-    transform: translate(-40px, 10px) rotate(calc(var(--rotation) - 5deg));
+  33% {
+    transform: translateY(-20px) translateX(-8px) rotate(calc(var(--rotation) - 8deg));
   }
-  100% {
-    transform: translate(0, 0) rotate(var(--rotation));
+  66% {
+    transform: translateY(-8px) translateX(12px) rotate(calc(var(--rotation) + 8deg));
   }
 }
 
 @keyframes float3 {
-  0% {
-    transform: translate(0, 0) rotate(var(--rotation));
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(var(--rotation));
   }
   50% {
-    transform: translate(20px, 18px) rotate(calc(var(--rotation) + 6deg));
-  }
-  100% {
-    transform: translate(0, 0) rotate(var(--rotation));
+    transform: translateY(-18px) translateX(-10px) rotate(calc(var(--rotation) - 6deg));
   }
 }
 
 @keyframes float4 {
-  0% {
-    transform: translate(0, 0) rotate(var(--rotation));
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(var(--rotation));
+  }
+  25% {
+    transform: translateY(-12px) translateX(6px) rotate(calc(var(--rotation) + 4deg));
   }
   50% {
-    transform: translate(-25px, -15px) rotate(calc(var(--rotation) - 4deg));
+    transform: translateY(-22px) translateX(-8px) rotate(calc(var(--rotation) - 4deg));
   }
-  100% {
-    transform: translate(0, 0) rotate(var(--rotation));
+  75% {
+    transform: translateY(-10px) translateX(10px) rotate(calc(var(--rotation) + 6deg));
   }
 }
 
+.pill-animate {
+  position: absolute;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
