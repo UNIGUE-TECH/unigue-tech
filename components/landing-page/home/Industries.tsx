@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-function Services() {
+function Industries() {
   const industries = [
     "Financial Services",
     "Healthcare",
@@ -165,4 +165,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Industries;
