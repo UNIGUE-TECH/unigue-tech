@@ -1,83 +1,84 @@
-import GetInTouchButton from "../../ui/GetInTouchButton";
+import React from 'react';
 
 function Hero() {
   const pillLabels = [
-    { text: "IT Services", color: "bg-blue-200", textColor: "text-blue-800", rotation: -5, animation: "float1", delay: 0, left: "10%" },
-    { text: "Web development", color: "bg-blue-300", textColor: "text-blue-900", rotation: 8, animation: "float2", delay: 0.5, left: "15%" },
-    { text: "App design", color: "bg-orange-200", textColor: "text-orange-800", rotation: -12, animation: "float3", delay: 1, left: "20%" },
-    { text: "Cloud Solutions", color: "bg-pink-200", textColor: "text-pink-800", rotation: 15, animation: "float4", delay: 1.5, left: "25%" },
-    { text: "Data Analytics", color: "bg-purple-200", textColor: "text-purple-800", rotation: -8, animation: "float1", delay: 2, left: "30%" },
-    { text: "DevOps", color: "bg-blue-200", textColor: "text-blue-800", rotation: 10, animation: "float2", delay: 2.5, left: "35%" },
-    { text: "UI/UX Design", color: "bg-pink-300", textColor: "text-pink-900", rotation: -15, animation: "float3", delay: 3, left: "40%" },
-    { text: "Mobile Apps", color: "bg-orange-300", textColor: "text-orange-900", rotation: 5, animation: "float4", delay: 3.5, left: "45%" },
-    { text: "IT Services", color: "bg-green-200", textColor: "text-green-800", rotation: -10, animation: "float1", delay: 4, left: "50%" },
-    { text: "API Development", color: "bg-blue-200", textColor: "text-blue-800", rotation: 12, animation: "float2", delay: 4.5, left: "55%" },
-    { text: "E-commerce", color: "bg-pink-200", textColor: "text-pink-800", rotation: -7, animation: "float3", delay: 5, left: "60%" },
-    { text: "Consulting", color: "bg-purple-300", textColor: "text-purple-900", rotation: 9, animation: "float4", delay: 5.5, left: "65%" },
-    { text: "IT Services", color: "bg-orange-200", textColor: "text-orange-800", rotation: -11, animation: "float1", delay: 6, left: "70%" },
-    { text: "Security", color: "bg-blue-300", textColor: "text-blue-900", rotation: 6, animation: "float2", delay: 6.5, left: "75%" },
-    { text: "AI/ML", color: "bg-pink-300", textColor: "text-pink-900", rotation: -14, animation: "float3", delay: 7, left: "80%" },
-    { text: "IT Services", color: "bg-green-300", textColor: "text-green-900", rotation: 13, animation: "float4", delay: 7.5, left: "85%" },
+    // Bottom scattered layer
+    { text: "IT Services", color: "bg-pink-200", textColor: "text-pink-800", rotation: 0, animation: "float1", delay: 0, left: "6%", bottom: "50px" },
+    { text: "IT Services", color: "bg-orange-300", textColor: "text-orange-900", rotation: 0, animation: "float2", delay: 0.2, left: "19%", bottom: "50px" },
+    { text: "IT Services", color: "bg-pink-200", textColor: "text-pink-800", rotation:-30, animation: "float3", delay: 0.4, left: "48%", bottom: "95px" },
+    { text: "IT Services", color: "bg-blue-200", textColor: "text-blue-800", rotation: 0, animation: "float4", delay: 0.6, left: "59%", bottom: "55px" },
+    { text: "IT Services", color: "bg-orange-200", textColor: "text-orange-800", rotation: 30, animation: "float1", delay: 0.8, left: "75%", bottom: "120px" },
+    { text: "IT Services", color: "bg-orange-200", textColor: "text-orange-800", rotation: 0, animation: "float1", delay: 0.8, left: "86%", bottom: "55px" },
+    
+    // Middle scattered layer
+    { text: "App design", color: "bg-orange-200", textColor: "text-orange-800", rotation: 0, animation: "float2", delay: 1.0, left: "10%", bottom: "105px" },
+    { text: "IT Services", color: "bg-orange-300", textColor: "text-orange-900", rotation: 0, animation: "float4", delay: 1.2, left: "71%", bottom: "55px"  },
+    { text: "IT Services", color: "bg-pink-300", textColor: "text-pink-900", rotation: -40, animation: "float3", delay: 1.4, left: "37%", bottom: "105px" },
+    
+    // Top scattered layer
+    { text: "Web development", color: "bg-blue-300", textColor: "text-blue-900", rotation: -30, animation: "float1", delay: 1.6, left: "1%", bottom: "145px" },
+    { text: "IT Services", color: "bg-pink-300", textColor: "text-pink-900", rotation: -10, animation: "float2", delay: 1.8, left: "16%", bottom: "175px" },
+    { text: "IT Services", color: "bg-blue-300", textColor: "text-blue-900", rotation: 30, animation: "float3", delay: 2.0, left: "26%", bottom: "95px" },
+    { text: "IT Services", color: "bg-orange-200", textColor: "text-orange-800", rotation: -20, animation: "float4", delay: 2.2, left: "48%", bottom: "165px" },
+    { text: "IT Services", color: "bg-blue-300", textColor: "text-blue-900", rotation: 0, animation: "float1", delay: 2.4, left: "65%", bottom: "109px" },
   ];
 
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden bg-[#F5F5DC] min-h-[80vh] sm:h-[80vh] flex flex-col"
-    >
-      <div className="flex-1 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-        <p 
-          className="text-[#7BAE4E] text-center mb-4 sm:mb-6 text-base sm:text-lg md:text-[20px] leading-[100%]"
-          style={{ 
-            fontFamily: 'var(--font-montserrat), Montserrat, sans-serif',
-            fontWeight: 500,
-            letterSpacing: 0
-          }}
-        >
+    <section id="home" className="relative h-[80vh] overflow-hidden bg-[#FEFFF0] pt-16">
+      {/* HERO CONTENT */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-24">
+        <p className="text-[#7BAE4E] mb-6 text-lg font-medium">
           Product design. Engineering. Support.
         </p>
 
-        <h1 
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] font-bold text-center text-gray-900 max-w-4xl mb-6 sm:mb-10 leading-[100%] px-2"
-          style={{ 
-            fontFamily: 'var(--font-darker-grotesque), "Darker Grotesque", sans-serif',
-            fontWeight: 700,
-            letterSpacing: 0,
-            fontStyle: 'normal'
-          }}
-        >
+        <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold max-w-4xl mb-10 text-[#171717]">
           We design and build world-class software for corporations that want to scale.
         </h1>
-        <GetInTouchButton 
-          backgroundColor="#159653"
-          hoverBackgroundColor="#0d7a3f"
-          className="text-sm sm:text-base"
-        />
+
+        <button className="px-8 py-3 rounded-full font-medium text-white transition-all duration-300 hover:scale-105" style={{ backgroundColor: '#159653' }}>
+          Get in Touch
+        </button>
       </div>
-      <div className="relative w-full h-40 sm:h-48 md:h-60 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
-          {pillLabels.map((pill, index) => (
-            <span
-              key={index}
-              className={`pill-animate px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full ${pill.color} ${pill.textColor} whitespace-nowrap text-center hidden sm:inline-block`}
-              style={{ 
-                '--rotation': `${pill.rotation}deg`,
-                animationName: pill.animation,
-                animationDelay: `${pill.delay}s`,
-                left: pill.left,
-                top: `${20 + (index % 4) * 25}%`,
-                fontFamily: 'var(--font-montserrat), Montserrat, sans-serif',
-                fontWeight: 500,
-                fontSize: 'clamp(12px, 2vw, 30px)',
-                lineHeight: '100%',
-                letterSpacing: 0,
-                textAlign: 'center'
-              } as React.CSSProperties}
-            >
-              {pill.text}
-            </span>
-          ))}
-        </div>
+
+      {/* PILL CONTAINER - Now covers full section height */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none">
+        {pillLabels.map((pill, index) => (
+          <span
+            key={index}
+            className={`${pill.color} ${pill.textColor}`}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: pill.left,
+              padding: '0.75rem 1.5rem',
+              borderRadius: '9999px',
+              whiteSpace: 'nowrap',
+              fontFamily: 'var(--font-montserrat), Montserrat, sans-serif',
+              fontWeight: 500,
+              fontSize: '30px',
+              lineHeight: '100%',
+              letterSpacing: 0,
+              textAlign: 'center',
+              transform: `translateY(-60px) rotate(${pill.rotation}deg)`,
+              animation: `drop-${index} 1.2s cubic-bezier(0.22, 1, 0.36, 1) ${pill.delay}s forwards`,
+              willChange: 'transform',
+            }}
+          >
+            {pill.text}
+            <style>{`
+              @keyframes drop-${index} {
+                from {
+                  transform: translateY(-60px) rotate(${pill.rotation}deg);
+                  opacity: 0;
+                }
+                to {
+                  transform: translateY(calc(80vh - ${pill.bottom})) rotate(${pill.rotation}deg);
+                  opacity: 1;
+                }
+              }
+            `}</style>
+          </span>
+        ))}
       </div>
     </section>
   );

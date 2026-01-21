@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-t border-b border-[#DDDDDD] bg-[#F5F5DC]">
+    <nav className="fixed top-0 z-50 w-full border-t border-b border-[#DDDDDD] bg-[#FEFFF0]">
       <div className="mx-auto  px-4 sm:px-10 lg:px-14">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
@@ -18,7 +18,7 @@ const Navbar = () => {
               className="text-[22px] font-bold leading-[100%] text-gray-900 uppercase tracking-normal"
               style={{ fontFamily: 'var(--font-montserrat), Montserrat, sans-serif' }}
             >
-              UNIQUE TECH
+              UNIGUE TECH
             </Link>
           </div>
           <div className="hidden md:block">

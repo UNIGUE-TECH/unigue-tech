@@ -64,7 +64,7 @@ function Industries() {
 
   return (
     <div>
-      <section id="services" className="py-12 sm:py-18 md:py-24 lg:py-32 bg-[#F5F5DC]">
+      <section id="services" className="py-8 sm:py-10 md:py-8  lg:py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center mb-8 sm:mb-12">
           <h2
@@ -119,7 +119,7 @@ function Industries() {
     </section>
     <section>
          {/* Background Image with Overlay */}
-         <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] flex items-center justify-center overflow-hidden">
+         <div className="relative w-full h-[40vh] sm:h-[60vh] md:h-[60vh] lg:h-[60vh] flex items-center justify-center overflow-hidden">
           <Image
             src="/images/Rectangle.svg"
             alt="Background"
