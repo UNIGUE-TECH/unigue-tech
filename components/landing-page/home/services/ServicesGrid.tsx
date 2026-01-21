@@ -1,11 +1,6 @@
 
 import ServiceCard from './ServiceCard'
-
-const services = Array(6).fill({
-  title: 'Full stack Development',
-  description:
-    'Through refined UX design and reliable full-stack engineering, we deliver software that is elegant, intuitive, and built for long-term growth.',
-})
+import { services } from '@/components/data/services'
 
 export default function ServicesGrid() {
   return (
@@ -15,6 +10,7 @@ export default function ServicesGrid() {
           key={index}
           title={service.title}
           description={service.description}
+          details={service.details}
         />
       ))}
     </div>
