@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FEFFF0;
   --foreground: #171717;
 }
 
@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FEFFF0;
+    --foreground: #171717;
   }
 }
 
@@ -23,4 +23,25 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-features {
+  background-image: url('/assets/images/backdrop.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.features-swiper {
+  padding-bottom: 4rem; 
+}
+
+.features-swiper .swiper-pagination {
+  bottom: -20px;
+}
+
+.bg-footer {
+  background-image: url('/assets/images/backdrop1.png'); 
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
