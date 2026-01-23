@@ -17,7 +17,7 @@ function About() {
 
           {/* Main heading */}
           <h2 
-            className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[64px] font-bold leading-[100%] px-2"
+            className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[58px] font-bold leading-[100%] px-1"
             style={{ 
               fontFamily: 'var(--font-darker-grotesque), "Darker Grotesque", sans-serif',
               fontWeight: 700,
