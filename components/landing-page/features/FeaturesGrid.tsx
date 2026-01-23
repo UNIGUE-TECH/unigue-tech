@@ -44,7 +44,9 @@ export default function FeaturesGrid() {
       <Swiper
         modules={[Pagination, Navigation]}
         spaceBetween={32}
-        slidesPerView={1}
+        slidesPerView={2.2}
+        slidesOffsetAfter={52}
+        slidesOffsetBefore={52}
         navigation={{
           nextEl: '.swiper-button-next-custom',
           prevEl: '.swiper-button-prev-custom',
@@ -56,10 +58,12 @@ export default function FeaturesGrid() {
         }}
         breakpoints={{
           768: {
-            slidesPerView: 2,
+            slidesPerView: 2.3,
+             slidesOffsetBefore: 32,  
+             slidesOffsetAfter: 0,
           },
         }}
-        className="pb-16"
+        className="pb-16 pl-4 md:pl-8 lg:pl-32"
       >
         {features.map((feature, index) => (
           <SwiperSlide key={index}>

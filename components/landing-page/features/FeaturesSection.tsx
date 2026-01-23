@@ -7,15 +7,15 @@ export default function FeaturesSection() {
      
       <div className="absolute inset-0 bg-black/10" />
 
-      <button className="swiper-button-prev-custom absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors">
+      <button className="swiper-button-prev-custom absolute left-1/3 bottom-0 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors">
         <ChevronLeft className="w-6 h-6 text-blue-600" />
       </button>
       
-      <button className="swiper-button-next-custom absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors">
+      <button className="swiper-button-next-custom absolute right-1/3 bottom-0 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors">
         <ChevronRight className="w-6 h-6 text-blue-600" />
       </button>
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative w-full mx-auto overflow-hidden">
         <FeaturesGrid />
       </div>
     </section>
