@@ -16,7 +16,7 @@ const Links = ({ direction = "row", toggle, setToggle }: LinksProps) => {
     { title: "Home", path: "/", hash: "#home" },
     { title: "What We Do", path: "/", hash: "#services" },
     { title: "Industries", path: "/", hash: "#industries" },
-    { title: "Our Work", path: "/", hash: "#work" },
+    { title: "Our Work", path: "/", hash: "#features" },
     { title: "About Us", path: "/", hash: "#about" },
   ];
 

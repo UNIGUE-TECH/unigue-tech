@@ -10,17 +10,18 @@ export default function ServicesLogos() {
     "/assets/images/logo6.png",
   ];
   return (
-    <div className="flex flex-wrap justify-center gap-6">
+    <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 px-2">
       {logos.map((src, i) => (
         <div
           key={i}
-          className=" bg-[#F4F1E6] flex items-center justify-center rounded"
+          className="bg-[#F4F1E6] flex items-center justify-center rounded p-2 sm:p-3"
         >
           <Image
             src={src}
-            alt={`Client logo ${1 + 1}`}
+            alt={`Client logo ${i + 1}`}
             width={56}
             height={56}
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
           />
         </div>
       ))}

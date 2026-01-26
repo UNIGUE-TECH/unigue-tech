@@ -25,7 +25,7 @@ function GetInTouchButton({
   return (
     <Link
       href={href}
-      className={`group h-max w-max px-4 py-2 rounded-lg text-white transition-all duration-300 flex items-center gap-2 ${className}`}
+      className={`group h-max w-max px-4 py-1.5  text-white transition-all duration-300 flex items-center gap-2 ${className}`}
       style={{
         backgroundColor,
         fontFamily: 'var(--font-montserrat), Montserrat, sans-serif',
