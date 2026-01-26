@@ -25,7 +25,7 @@ function About() {
               fontStyle: 'normal'
             }}
           >
-            We're a software development firm helping organizations transform bold ideas into world-class digital products.
+            We&apos;re a software development firm helping organizations transform bold ideas into world-class digital products.
           </h2>
 
           {/* Bottom text */}

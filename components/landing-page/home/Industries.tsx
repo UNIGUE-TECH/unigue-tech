@@ -128,9 +128,9 @@ function Industries() {
             priority
           />
           {/* White Overlay Box */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mx-4 sm:mx-6 max-w-[90%] sm:max-w-md md:max-w-lg shadow-xl">
+          <div className="relative z-10 bg-white rounded-xl sm:rounded-2xl p-6 sm:p-6 md:p-8 mx-2 sm:mx-6 max-w-[75%] sm:max-w-md md:max-w-lg shadow-xl">
             <h3
-              className="mb-3 sm:mb-4 text-sm sm:text-base"
+              className="mb-4 sm:mb-4 text-base sm:text-base md:text-lg"
               style={{
                 fontFamily: 'var(--font-montserrat), Montserrat, sans-serif',
                 fontWeight: 500,
@@ -144,12 +144,12 @@ function Industries() {
             {currentContent.paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className={index > 0 ? "mt-3 sm:mt-4" : ""}
+                className={index > 0 ? "mt-4 sm:mt-4" : ""}
                 style={{
                   fontFamily: 'var(--font-darker-grotesque), "Darker Grotesque", sans-serif',
                   fontWeight: 500,
-                  fontSize: "clamp(14px, 2.5vw, 24px)",
-                  lineHeight: "100%",
+                  fontSize: "clamp(16px, 3vw, 24px)",
+                  lineHeight: "120%",
                   letterSpacing: 0,
                   color: "#000000",
                 }}

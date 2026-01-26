@@ -28,6 +28,7 @@ const Navbar = () => {
             <GetInTouchButton 
               backgroundColor="#02190C"
               hoverBackgroundColor="#023d1a"
+              className="rounded-full"
             />
           </div>
 
