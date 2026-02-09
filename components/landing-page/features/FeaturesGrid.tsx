@@ -43,10 +43,10 @@ export default function FeaturesGrid() {
     <div className="relative">
       <Swiper
         modules={[Pagination, Navigation]}
-        spaceBetween={32}
-        slidesPerView={2.2}
-        slidesOffsetAfter={52}
-        slidesOffsetBefore={52}
+        spaceBetween={16}
+        slidesPerView={1.2}
+        slidesOffsetAfter={0}
+        slidesOffsetBefore={0}
         navigation={{
           nextEl: '.swiper-button-next-custom',
           prevEl: '.swiper-button-prev-custom',
@@ -57,13 +57,26 @@ export default function FeaturesGrid() {
           el: '.swiper-pagination-custom',
         }}
         breakpoints={{
+          640: {
+            spaceBetween: 24,
+            slidesPerView: 1.5,
+            slidesOffsetAfter: 24,
+            slidesOffsetBefore: 24,
+          },
           768: {
+            spaceBetween: 32,
+            slidesPerView: 2.2,
+            slidesOffsetAfter: 32,
+            slidesOffsetBefore: 32,
+          },
+          1024: {
+            spaceBetween: 32,
             slidesPerView: 2.3,
-             slidesOffsetBefore: 32,  
-             slidesOffsetAfter: 0,
+            slidesOffsetAfter: 0,
+            slidesOffsetBefore: 32,
           },
         }}
-        className="pb-16 pl-4 md:pl-8 lg:pl-32"
+        className="pb-12 sm:pb-14 md:pb-16 pl-4 sm:pl-6 md:pl-8 lg:pl-16 xl:pl-32"
       >
         {features.map((feature, index) => (
           <SwiperSlide key={index}>
@@ -75,7 +88,7 @@ export default function FeaturesGrid() {
         ))}
       </Swiper>
 
-      <div className="swiper-pagination-custom mt-8 flex justify-center gap-2"></div>
+      <div className="swiper-pagination-custom mt-4 sm:mt-6 md:mt-8 flex justify-center gap-2"></div>
     </div>
   )
 }
