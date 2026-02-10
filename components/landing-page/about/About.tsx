@@ -1,37 +1,44 @@
 function About() {
   return (
-    <section id="about" className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:max-w-none">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-              About Us
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              We are a team of passionate developers and designers dedicated to
-              creating exceptional digital experiences.
-            </p>
-          </div>
-          <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <div className="rounded-2xl bg-gray-50 p-8 dark:bg-gray-900">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                Our Mission
-              </h3>
-              <p className="mt-4 text-gray-600 dark:text-gray-300">
-                To empower businesses with innovative technology solutions that
-                drive growth and success in the digital age.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-gray-50 p-8 dark:bg-gray-900">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                Our Vision
-              </h3>
-              <p className="mt-4 text-gray-600 dark:text-gray-300">
-                To be the leading technology partner for businesses seeking
-                transformative digital solutions.
-              </p>
-            </div>
-          </div>
+    <section id="about" className="py-12 sm:py-16 md:py-24 lg:py-32 min-h-[70vh] sm:h-[70vh] flex items-center bg-black">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
+        <div className="mx-auto max-w-4xl text-center space-y-4 sm:space-y-6 md:space-y-8">
+          {/* Top text */}
+          <p 
+            className="text-[#F3E4C3] text-base sm:text-lg md:text-[20px] leading-[100%]"
+            style={{ 
+              fontFamily: 'var(--font-montserrat), Montserrat, sans-serif',
+              fontWeight: 500,
+              letterSpacing: 0
+            }}
+          >
+            We are Unigue.
+          </p>
+
+          {/* Main heading */}
+          <h2 
+            className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[58px] font-bold leading-[100%] px-1"
+            style={{ 
+              fontFamily: 'var(--font-darker-grotesque), "Darker Grotesque", sans-serif',
+              fontWeight: 700,
+              letterSpacing: 0,
+              fontStyle: 'normal'
+            }}
+          >
+            We&apos;re a software development firm helping organizations transform bold ideas into world-class digital products.
+          </h2>
+
+          {/* Bottom text */}
+          <p 
+            className="text-[#F3E4C3] text-base sm:text-lg md:text-[20px] leading-[130%] px-2"
+            style={{ 
+              fontFamily: 'var(--font-montserrat), Montserrat, sans-serif',
+              fontWeight: 400,
+              letterSpacing: 0
+            }}
+          >
+            Through refined UX design and reliable full-stack engineering, we deliver software that is elegant, intuitive, and built for long-term growth.
+          </p>
         </div>
       </div>
     </section>
