@@ -3,24 +3,24 @@ import React from 'react';
 function Hero() {
   const pillLabels = [
     // Bottom scattered layer
-    { text: "IT Services", color: "bg-pink-200", textColor: "text-pink-800", rotation: 0, animation: "float1", delay: 0, left: "6%", bottom: "-40px", leftMobile: "12%", bottomMobile: "35px", showOnMobile: true },
-    { text: "IT Services", color: "bg-orange-300", textColor: "text-orange-900", rotation: 0, animation: "float2", delay: 0.2, left: "19%", bottom: "-40px", leftMobile: "25%", bottomMobile: "67px", showOnMobile: true },
-    { text: "IT Services", color: "bg-pink-200", textColor: "text-pink-800", rotation:-30, animation: "float3", delay: 0.4, left: "48%", bottom: "5px", leftMobile: "5%", bottomMobile: "72px", showOnMobile: true },
-    { text: "IT Services", color: "bg-blue-200", textColor: "text-blue-800", rotation: 0, animation: "float4", delay: 0.6, left: "59%", bottom: "-35px", leftMobile: "76%", bottomMobile: "35px", showOnMobile: true },
-    { text: "IT Services", color: "bg-orange-200", textColor: "text-orange-800", rotation: 30, animation: "float1", delay: 0.8, left: "75%", bottom: "30px", leftMobile: "46%", bottomMobile: "50px", showOnMobile: true },
-    { text: "IT Services", color: "bg-orange-200", textColor: "text-orange-800", rotation: 0, animation: "float1", delay: 0.8, left: "86%", bottom: "-35px", leftMobile: "60%", bottomMobile: "150px", showOnMobile: false },
+    { text: "IT Services", color: "bg-pink-200", textColor: "text-pink-800", rotation: 0, animation: "float1", delay: 0, left: "6%", bottom: "-30px", leftMobile: "12%", bottomMobile: "35px", showOnMobile: true },
+    { text: "IT Services", color: "bg-orange-300", textColor: "text-orange-900", rotation: 0, animation: "float2", delay: 0.2, left: "19%", bottom: "-30px", leftMobile: "25%", bottomMobile: "67px", showOnMobile: true },
+    { text: "IT Services", color: "bg-pink-200", textColor: "text-pink-800", rotation:-30, animation: "float3", delay: 0.4, left: "48%", bottom: "15px", leftMobile: "5%", bottomMobile: "72px", showOnMobile: true },
+    { text: "IT Services", color: "bg-blue-200", textColor: "text-blue-800", rotation: 0, animation: "float4", delay: 0.6, left: "59%", bottom: "-25px", leftMobile: "76%", bottomMobile: "35px", showOnMobile: true },
+    { text: "IT Services", color: "bg-orange-200", textColor: "text-orange-800", rotation: 30, animation: "float1", delay: 0.8, left: "75%", bottom: "40px", leftMobile: "46%", bottomMobile: "50px", showOnMobile: true },
+    { text: "IT Services", color: "bg-orange-200", textColor: "text-orange-800", rotation: 0, animation: "float1", delay: 0.8, left: "86%", bottom: "-25px", leftMobile: "60%", bottomMobile: "150px", showOnMobile: false },
     
     // Middle scattered layer
-    { text: "App design", color: "bg-orange-200", textColor: "text-orange-800", rotation: 0, animation: "float2", delay: 1.0, left: "10%", bottom: "15px", leftMobile: "33%", bottomMobile: "35px", showOnMobile: true },
-    { text: "IT Services", color: "bg-orange-300", textColor: "text-orange-900", rotation: 0, animation: "float4", delay: 1.2, left: "71%", bottom: "-35px", leftMobile: "55%", bottomMobile: "200px", showOnMobile: false },
-    { text: "IT Services", color: "bg-pink-300", textColor: "text-pink-900", rotation: -40, animation: "float3", delay: 1.4, left: "37%", bottom: "15px", leftMobile: "65%", bottomMobile: "50px", showOnMobile: true },
+    { text: "App design", color: "bg-orange-200", textColor: "text-orange-800", rotation: 0, animation: "float2", delay: 1.0, left: "10%", bottom: "25px", leftMobile: "33%", bottomMobile: "35px", showOnMobile: true },
+    { text: "IT Services", color: "bg-orange-300", textColor: "text-orange-900", rotation: 0, animation: "float4", delay: 1.2, left: "71%", bottom: "-25px", leftMobile: "55%", bottomMobile: "200px", showOnMobile: false },
+    { text: "IT Services", color: "bg-pink-300", textColor: "text-pink-900", rotation: -40, animation: "float3", delay: 1.4, left: "37%", bottom: "25px", leftMobile: "65%", bottomMobile: "50px", showOnMobile: true },
     
     // Top scattered layer
-    { text: "Web development", color: "bg-blue-300", textColor: "text-blue-900", rotation: -30, animation: "float1", delay: 1.6, left: "1%", bottom: "55px", leftMobile: "10%", bottomMobile: "300px", showOnMobile: false },
-    { text: "IT Services", color: "bg-pink-300", textColor: "text-pink-900", rotation: -10, animation: "float2", delay: 1.8, left: "16%", bottom: "85px", leftMobile: "65%", bottomMobile: "300px", showOnMobile: false },
-    { text: "IT Services", color: "bg-blue-300", textColor: "text-blue-900", rotation: 30, animation: "float3", delay: 2.0, left: "26%", bottom: "5px", leftMobile: "20%", bottomMobile: "350px", showOnMobile: false },
-    { text: "IT Services", color: "bg-orange-200", textColor: "text-orange-800", rotation: -20, animation: "float4", delay: 2.2, left: "48%", bottom: "75px", leftMobile: "70%", bottomMobile: "350px", showOnMobile: false },
-    { text: "IT Services", color: "bg-blue-300", textColor: "text-blue-900", rotation: 0, animation: "float1", delay: 2.4, left: "65%", bottom: "19px", leftMobile: "45%", bottomMobile: "400px", showOnMobile: false },
+    { text: "Web development", color: "bg-blue-300", textColor: "text-blue-900", rotation: -30, animation: "float1", delay: 1.6, left: "1%", bottom: "65px", leftMobile: "10%", bottomMobile: "300px", showOnMobile: false },
+    { text: "IT Services", color: "bg-pink-300", textColor: "text-pink-900", rotation: -10, animation: "float2", delay: 1.8, left: "16%", bottom: "95px", leftMobile: "65%", bottomMobile: "300px", showOnMobile: false },
+    { text: "IT Services", color: "bg-blue-300", textColor: "text-blue-900", rotation: 30, animation: "float3", delay: 2.0, left: "26%", bottom: "25px", leftMobile: "20%", bottomMobile: "350px", showOnMobile: false },
+    { text: "IT Services", color: "bg-orange-200", textColor: "text-orange-800", rotation: -20, animation: "float4", delay: 2.2, left: "48%", bottom: "95px", leftMobile: "70%", bottomMobile: "350px", showOnMobile: false },
+    { text: "IT Services", color: "bg-blue-300", textColor: "text-blue-900", rotation: 0, animation: "float1", delay: 2.4, left: "65%", bottom: "39px", leftMobile: "45%", bottomMobile: "400px", showOnMobile: false },
   ];
 
   return (
