@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function ServicesLogos() {
   const logos = [
-    "/assets/images/logo1.png",
-    "/assets/images/logo2.png",
-    "/assets/images/logo3.png",
-    "/assets/images/logo4.png",
-    "/assets/images/logo5.jpg",
-    "/assets/images/logo6.png",
-    "/assets/images/logo7.webp",
+    "/assets/images/LG1.png",
+    "/assets/images/LG2.png",
+    "/assets/images/LG3.png",
+    "/assets/images/LG4.png",
+    "/assets/images/LG5.jpg",
+    "/assets/images/LG6.png",
+    "/assets/images/LG7.webp",
   ];
   return (
     <div className="flex  flex-wrap justify-center gap-6">
