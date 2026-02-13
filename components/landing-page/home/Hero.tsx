@@ -31,16 +31,15 @@ function Hero() {
           Product design. Engineering. Support.
         </p>
 
-        <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold max-w-4xl mb-10 text-[#171717]">
+        <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold max-w-4xl mb-10 text-[#171717]">
           We design and build world-class software for corporations that want to scale.
         </h1>
 
-        <button className="px-8 py-3 rounded-full font-medium text-white transition-all duration-300 hover:scale-105" style={{ backgroundColor: '#159653' }}>
+        <button className="px-7 py-2 rounded-full font-medium text-white transition-all duration-300 hover:scale-105" style={{ backgroundColor: '#159653' }}>
           Get in Touch
         </button>
       </div>
 
-      {/* PILL CONTAINER - Now covers full section height */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         <style>{`
           ${pillLabels.map((pill, index) => `
