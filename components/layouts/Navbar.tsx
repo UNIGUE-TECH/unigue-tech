@@ -16,7 +16,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link
               href="/"
-              className="flex items-center gap-2 text-[22px] font-bold leading-[100%] text-gray-900 uppercase tracking-normal"
+              className="flex items-center gap-1.5 md:gap-2 text-base md:text-lg lg:text-xl xl:text-[22px] font-bold leading-[100%] text-gray-900 uppercase tracking-normal"
               style={{ fontFamily: 'var(--font-montserrat), Montserrat, sans-serif' }}
             >
               <Image
@@ -24,7 +24,7 @@ const Navbar = () => {
                 alt="Unigue Tech"
                 width={36}
                 height={36}
-                className="rounded-full object-cover shrink-0"
+                className="w-7 h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 rounded-full object-cover shrink-0"
               />
               UNIGUE TECH
             </Link>

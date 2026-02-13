@@ -28,12 +28,12 @@ const Links = ({ direction = "row", toggle, setToggle }: LinksProps) => {
 
   if (direction === "row") {
     return (
-      <div className="ml-10 flex items-baseline space-x-8">
+      <div className="ml-4 md:ml-6 lg:ml-10 flex items-baseline space-x-4 md:space-x-5 lg:space-x-8">
         {links.map((link, index) => (
           <Link
             key={index}
             href={link.hash}
-            className="text-[16px] font-medium leading-[100%] text-gray-900 transition-colors hover:text-gray-600"
+            className="text-[13px] md:text-[10px] lg:text-[15px] xl:text-[16px] font-medium leading-[100%] text-gray-900 transition-colors hover:text-gray-600"
             style={{ fontFamily: 'var(--font-montserrat), Montserrat, sans-serif', fontWeight: 500 }}
           >
             {link.title}
