@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import Link from 'next/link';
 
 function Hero() {
   const pillLabels = [
@@ -35,9 +38,18 @@ function Hero() {
           We design and build world-class software for corporations that want to scale.
         </h1>
 
-        <button className="px-7 py-2 rounded-full font-medium text-white transition-all duration-300 hover:scale-105" style={{ backgroundColor: '#159653' }}>
+        <Link
+          href="#contact"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", "#contact");
+          }}
+          className="px-7 py-2 rounded-full font-medium text-white transition-all duration-300 hover:scale-105 inline-block"
+          style={{ backgroundColor: '#159653' }}
+        >
           Get in Touch
-        </button>
+        </Link>
       </div>
 
       <div className="absolute inset-0 w-full h-full pointer-events-none">

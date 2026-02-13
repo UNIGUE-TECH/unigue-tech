@@ -22,9 +22,20 @@ function GetInTouchButton({
 
   const hoverBg = hoverBackgroundColor || defaultHoverBg;
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const id = href.slice(1);
+      const el = document.getElementById(id);
+      el?.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", href);
+    }
+  };
+
   return (
     <Link
       href={href}
+      onClick={handleClick}
       className={`group h-max w-max px-4 py-1.5  text-white transition-all duration-300 flex items-center gap-2 ${className}`}
       style={{
         backgroundColor,

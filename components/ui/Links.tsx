@@ -60,7 +60,12 @@ const Links = ({ direction = "row", toggle, setToggle }: LinksProps) => {
         <Link
           href="#contact"
           className="group flex items-center justify-center w-full px-6 py-3 text-sm font-medium rounded-lg bg-[#2D5016] text-white hover:bg-[#1f350f] transition-all duration-300 gap-2"
-          onClick={handleClick}
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", "#contact");
+            handleClick();
+          }}
         >
           <span className="relative w-2 h-2 rounded-full bg-[#7BAE4E] flex items-center justify-center overflow-visible">
             <svg 
