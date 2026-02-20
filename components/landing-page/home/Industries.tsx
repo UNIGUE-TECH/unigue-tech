@@ -68,7 +68,6 @@ function Industries() {
 
   return (
     <div>
-      {/* ================= HEADER SECTION ================= */}
       <section
         id="industries"
         className="py-12 sm:py-16 md:py-20 lg:py-24"
@@ -98,8 +97,6 @@ function Industries() {
               engineering.
             </p>
           </div>
-
-          {/* ================= INDUSTRY BUTTONS ================= */}
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12">
             {industries.map((industry) => (
               <button
@@ -121,8 +118,6 @@ function Industries() {
           </div>
         </div>
       </section>
-
-      {/* ================= IMAGE + RECTANGLE CARD SECTION ================= */}
       <section>
         <div className="relative w-full min-h-[350px] sm:min-h-[420px] md:min-h-[480px] lg:min-h-[520px] flex items-center justify-center overflow-hidden px-4">
           {/* Background Image */}
@@ -133,8 +128,6 @@ function Industries() {
             className="object-cover"
             priority
           />
-
-          {/* Wide Rectangle Card */}
           <div
             className="relative z-10 bg-white rounded-2xl shadow-2xl 
                        w-full 
@@ -144,7 +137,6 @@ function Industries() {
                        xl:max-w-4xl 
                        p-6 sm:p-8 md:p-10"
           >
-            {/* Title stays on top */}
             <h3
               className="text-lg sm:text-xl md:text-2xl font-semibold mb-4"
               style={{
