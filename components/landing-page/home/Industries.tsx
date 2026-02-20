@@ -5,6 +5,7 @@ import Image from "next/image";
 
 function Industries() {
   const industries = [
+    "AI",
     "Financial Services",
     "Healthcare",
     "Real Estate",
@@ -14,12 +15,19 @@ function Industries() {
   ];
 
   const [selectedIndustry, setSelectedIndustry] =
-    useState("Financial Services");
+    useState("AI");
 
   const industryContent: Record<
     string,
     { heading: string; paragraphs: string[] }
   > = {
+    AI: {
+      heading: "Artificial Intelligence",
+      paragraphs: [
+        "We develop cutting-edge AI solutions that transform business operations and unlock new possibilities. Our AI platforms enable organizations to leverage machine learning, natural language processing, and computer vision to automate processes, gain insights, and deliver intelligent experiences.",
+        "From predictive analytics to intelligent automation and custom AI models, we build solutions that help businesses harness the power of artificial intelligence to drive innovation, improve decision-making, and stay ahead in the rapidly evolving digital landscape.",
+      ],
+    },
     "Financial Services": {
       heading: "Financial Services",
       paragraphs: [
