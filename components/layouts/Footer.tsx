@@ -74,9 +74,9 @@ export default function Footer() {
           </aside>
         </div>
         <div className="py-4 sm:py-5 md:py-6 border-t border-white/10 text-center text-xs sm:text-sm text-gray-400">
-          © 2025 unigue. All rights reserved.
+          © {new Date().getFullYear()} unigue. All rights reserved.
         </div>
       </div>
     </footer>
   );
-}
+} 
