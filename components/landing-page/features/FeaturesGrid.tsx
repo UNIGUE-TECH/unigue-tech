@@ -15,26 +15,36 @@ const features = [
     title: 'Full stack Development',
     description:
       'Through refined UX design and reliable full-stack engineering, we deliver software that is elegant, intuitive, and built for long-term growth.',
+    image: '/images/full-stack.jpg',
+    imageAlt: 'Full stack development',
   },
   {
     title: 'Mobile App Development',
     description:
       'We create native and cross-platform mobile applications that deliver seamless user experiences across iOS and Android devices.',
+    image: '/images/mobile.jpg',
+    imageAlt: 'Mobile app development',
   },
   {
     title: 'UI/UX Design',
     description:
       'Our design team crafts beautiful, intuitive interfaces that prioritize user experience and align with your brand identity.',
+    image: '/images/ui-ux.jpg',
+    imageAlt: 'UI/UX design',
   },
   {
     title: 'Cloud Solutions',
     description:
       'We architect and implement scalable cloud infrastructure that grows with your business and ensures high availability.',
+    image: '/images/cloud.jpg',
+    imageAlt: 'Cloud solutions',
   },
   {
     title: 'E-commerce Solutions',
     description:
       'Build powerful online stores with secure payment processing, inventory management, and seamless checkout experiences.',
+    image: '/images/e-commerce.jpg',
+    imageAlt: 'E-commerce solutions',
   },
 ]
 
@@ -83,6 +93,8 @@ export default function FeaturesGrid() {
             <FeatureCard
               title={feature.title}
               description={feature.description}
+              imageSrc={feature.image}
+              imageAlt={feature.imageAlt}
             />
           </SwiperSlide>
         ))}

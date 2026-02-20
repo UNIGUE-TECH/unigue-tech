@@ -1,13 +1,24 @@
+import Image from 'next/image'
+
 type Props = {
   title: string
   description: string
+  imageSrc: string
+  imageAlt: string
 }
 
-export default function FeatureCard({ title, description }: Props) {
+export default function FeatureCard({ title, description, imageSrc, imageAlt }: Props) {
   return (
     <div className="bg-white rounded-md shadow-lg overflow-hidden max-w-2xl w-full">
-      
-      <div className="h-48 sm:h-64 md:h-80 lg:h-96 bg-gray-300 border-4 sm:border-6 md:border-8 border-white" />
+      <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 border-4 sm:border-[6px] md:border-8 border-white overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 33vw"
+        />
+      </div>
 
      
       <div className="p-4 sm:p-5 md:p-6">

@@ -2,26 +2,26 @@ import Image from "next/image";
 
 export default function ServicesLogos() {
   const logos = [
-    "/assets/images/logo1.png",
-    "/assets/images/logo2.png",
-    "/assets/images/logo3.png",
-    "/assets/images/logo4.png",
-    "/assets/images/logo5.png",
-    "/assets/images/logo6.png",
+    "/assets/images/LG1.png",
+    "/assets/images/LG2.png",
+    "/assets/images/LG3.png",
+    "/assets/images/LG4.png",
+    "/assets/images/LG5.jpg",
+    "/assets/images/LG6.png",
+    "/assets/images/LG7.webp",
   ];
   return (
-    <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 px-2">
+    <div className="flex  flex-wrap justify-center gap-6">
       {logos.map((src, i) => (
         <div
           key={i}
-          className="bg-[#F4F1E6] flex items-center justify-center rounded p-2 sm:p-3"
+          className={`${i === 0 ? 'bg-black' : 'bg-transparent'} p-1 flex items-center justify-center `}
         >
           <Image
             src={src}
-            alt={`Client logo ${i + 1}`}
-            width={56}
-            height={56}
-            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+            alt={`Client logo ${1 + 1}`}
+            width={60}
+            height={60}
           />
         </div>
       ))}

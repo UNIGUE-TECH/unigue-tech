@@ -14,10 +14,10 @@ const Links = ({ direction = "row", toggle, setToggle }: LinksProps) => {
 
   const links = [
     { title: "Home", path: "/", hash: "#home" },
-    { title: "What We Do", path: "/", hash: "#services" },
-    { title: "Industries", path: "/", hash: "#industries" },
-    { title: "Our Work", path: "/", hash: "#work" },
     { title: "About Us", path: "/", hash: "#about" },
+    { title: "Industries", path: "/", hash: "#industries" },
+    { title: "What We Do", path: "/", hash: "#services" },
+    { title: "Our Work", path: "/", hash: "#features" },
   ];
 
   const handleClick = () => {
@@ -28,12 +28,12 @@ const Links = ({ direction = "row", toggle, setToggle }: LinksProps) => {
 
   if (direction === "row") {
     return (
-      <div className="ml-10 flex items-baseline space-x-8">
+      <div className="ml-4 md:ml-6 lg:ml-10 flex items-baseline space-x-4 md:space-x-5 lg:space-x-8">
         {links.map((link, index) => (
           <Link
             key={index}
             href={link.hash}
-            className="text-[16px] font-medium leading-[100%] text-gray-900 transition-colors hover:text-gray-600"
+            className="text-[13px] md:text-[10px] lg:text-[15px] xl:text-[16px] font-medium leading-[100%] text-gray-900 transition-colors hover:text-gray-600"
             style={{ fontFamily: 'var(--font-montserrat), Montserrat, sans-serif', fontWeight: 500 }}
           >
             {link.title}
@@ -60,7 +60,12 @@ const Links = ({ direction = "row", toggle, setToggle }: LinksProps) => {
         <Link
           href="#contact"
           className="group flex items-center justify-center w-full px-6 py-3 text-sm font-medium rounded-lg bg-[#2D5016] text-white hover:bg-[#1f350f] transition-all duration-300 gap-2"
-          onClick={handleClick}
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", "#contact");
+            handleClick();
+          }}
         >
           <span className="relative w-2 h-2 rounded-full bg-[#7BAE4E] flex items-center justify-center overflow-visible">
             <svg 
