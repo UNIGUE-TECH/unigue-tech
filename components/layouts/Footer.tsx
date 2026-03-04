@@ -1,3 +1,7 @@
+'use client'
+
+import { useState, FormEvent } from 'react'
+
 const footerLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
@@ -7,6 +11,52 @@ const footerLinks = [
 ];
 
 export default function Footer() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [statusMessage, setStatusMessage] = useState('')
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setStatus('loading')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setStatus('success')
+        setStatusMessage(data.message)
+        setFormData({ name: '', email: '', message: '' })
+        setTimeout(() => setStatus('idle'), 5000)
+      } else {
+        setStatus('error')
+        setStatusMessage(data.error || 'Something went wrong')
+        setTimeout(() => setStatus('idle'), 5000)
+      }
+    } catch (error) {
+      setStatus('error')
+      setStatusMessage('Failed to send message. Please try again.')
+      setTimeout(() => setStatus('idle'), 5000)
+    }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }))
+  }
   return (
     <footer id="contact" className="relative bg-footer text-white px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-10 lg:py-12">
       <div className="absolute inset-0" />
@@ -15,7 +65,7 @@ export default function Footer() {
           <aside className="w-full lg:w-1/2 px-0 sm:px-2 md:px-5 ">
             <div className="max-w-md mx-auto lg:mx-0">
               <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
-                UNIGUE <br /> TECHNOLOGY
+                UNIGUE <br /> TECHNOLOGIES
               </h3>
 
               <p className="text-gray-400 mt-3 sm:mt-4 text-base sm:text-lg md:text-xl">
@@ -44,30 +94,52 @@ export default function Footer() {
                 Reach out to us
               </h4>
 
-              <form className="space-y-3 sm:space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Name"
-                  className="w-full bg-[#3a3a3a] text-sm sm:text-base px-3 sm:px-4 py-2.5 sm:py-3 rounded-md outline-none placeholder:text-gray-500"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  disabled={status === 'loading'}
+                  className="w-full bg-[#3a3a3a] text-sm sm:text-base px-3 sm:px-4 py-2.5 sm:py-3 rounded-md outline-none placeholder:text-gray-500 disabled:opacity-50"
                 />
 
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email address"
-                  className="w-full bg-[#3a3a3a] text-sm sm:text-base px-3 sm:px-4 py-2.5 sm:py-3 rounded-md outline-none placeholder:text-gray-500"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  disabled={status === 'loading'}
+                  className="w-full bg-[#3a3a3a] text-sm sm:text-base px-3 sm:px-4 py-2.5 sm:py-3 rounded-md outline-none placeholder:text-gray-500 disabled:opacity-50"
                 />
 
                 <textarea
+                  name="message"
                   placeholder="Subject description"
                   rows={4}
-                  className="w-full bg-[#3a3a3a] text-sm sm:text-base px-3 sm:px-4 py-2.5 sm:py-3 rounded-md outline-none resize-none placeholder:text-gray-500"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  disabled={status === 'loading'}
+                  className="w-full bg-[#3a3a3a] text-sm sm:text-base px-3 sm:px-4 py-2.5 sm:py-3 rounded-md outline-none resize-none placeholder:text-gray-500 disabled:opacity-50"
                 />
+
+                {statusMessage && (
+                  <div className={`text-sm text-center ${status === 'success' ? 'text-green-400' : 'text-red-400'}`}>
+                    {statusMessage}
+                  </div>
+                )}
 
                 <button
                   type="submit"
-                  className="w-full bg-white text-black text-sm sm:text-base py-2.5 sm:py-3 rounded-md font-medium hover:bg-gray-200 transition"
+                  disabled={status === 'loading'}
+                  className="w-full bg-white text-black text-sm sm:text-base py-2.5 sm:py-3 rounded-md font-medium hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Contact us
+                  {status === 'loading' ? 'Sending...' : 'Contact us'}
                 </button>
               </form>
             </div>
