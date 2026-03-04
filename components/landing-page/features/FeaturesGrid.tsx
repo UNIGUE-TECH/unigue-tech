@@ -1,16 +1,24 @@
 'use client'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper/modules'
+import { Pagination, Navigation, Mousewheel, FreeMode } from 'swiper/modules'
 
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import 'swiper/css/free-mode'
 
 import FeatureCard from './FeatureCard'
 
 const features = [
+  {
+    title: 'AI Solutions',
+    description:
+      'We build practical AI solutions, from intelligent assistants to workflow automation, that help teams move faster and make better decisions.',
+    image: '/images/Future-of-AI.jpg',
+    imageAlt: 'AI solutions',
+  },
   {
     title: 'Full stack Development',
     description:
@@ -52,11 +60,21 @@ export default function FeaturesGrid() {
   return (
     <div className="relative">
       <Swiper
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation, Mousewheel, FreeMode]}
         spaceBetween={16}
         slidesPerView={1.2}
         slidesOffsetAfter={0}
         slidesOffsetBefore={0}
+        grabCursor={true}
+        mousewheel={{
+          forceToAxis: true,
+          sensitivity: 1,
+          releaseOnEdges: true,
+        }}
+        freeMode={{
+          enabled: true,
+          sticky: true,
+        }}
         navigation={{
           nextEl: '.swiper-button-next-custom',
           prevEl: '.swiper-button-prev-custom',
