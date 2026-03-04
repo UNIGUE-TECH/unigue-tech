@@ -38,16 +38,25 @@ export default function Footer() {
         setStatus('success')
         setStatusMessage(data.message)
         setFormData({ name: '', email: '', message: '' })
-        setTimeout(() => setStatus('idle'), 5000)
+        setTimeout(() => {
+          setStatus('idle')
+          setStatusMessage('')
+        }, 30000)
       } else {
         setStatus('error')
         setStatusMessage(data.error || 'Something went wrong')
-        setTimeout(() => setStatus('idle'), 5000)
+        setTimeout(() => {
+          setStatus('idle')
+          setStatusMessage('')
+        }, 30000)
       }
     } catch (error) {
       setStatus('error')
       setStatusMessage('Failed to send message. Please try again.')
-      setTimeout(() => setStatus('idle'), 5000)
+      setTimeout(() => {
+        setStatus('idle')
+        setStatusMessage('')
+      }, 30000)
     }
   }
 
